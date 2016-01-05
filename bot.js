@@ -5,6 +5,9 @@ var keydownup = require("keyupdown");
 // Store process.stdin to a local variable
 var stdin = process.stdin;
 
+// Init the keydown and keyup events
+keydownup(process.stdin);
+
 var board = new five.Board({
   io: new Particle({
     token: '7ae40abd0f7c272888ca95b6740667febd1a29c8',
@@ -78,7 +81,7 @@ board.on("ready", function() {
   });
 
   // Stop when no keys are being pressed
-  stdin.on("keyup", function(chunk, key) {
+  stdin.on("keyup", function() {
     stop();
   });
 });
