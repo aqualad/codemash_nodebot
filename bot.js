@@ -6,7 +6,7 @@ var keydownup = require("keyupdown");
 var stdin = process.stdin;
 
 // Init the keydown and keyup events
-keydownup(process.stdin);
+keydownup(stdin);
 
 var board = new five.Board({
   io: new Particle({
