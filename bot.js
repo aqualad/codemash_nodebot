@@ -64,7 +64,8 @@ board.on("ready", function() {
     'left': left,
     'right': right,
     'space': stop,
-    'q': exit
+    'q': exit,
+    'c': console.clear
   };
 
   stdin.setRawMode(true);
