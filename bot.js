@@ -1,5 +1,6 @@
 var five = require("johnny-five");
 var Particle = require("particle-io");
+var keydownup = require("keyupdown");
 
 // Store process.stdin to a local variable
 var stdin = process.stdin;
@@ -73,5 +74,10 @@ board.on("ready", function() {
       if (!key || !keyMap[key.name]) return;
 
       keyMap[key.name]();
+  });
+
+  // Stop when no keys are being pressed
+  stdin.on("keyup", function(chunk, key) {
+    stop();
   });
 });

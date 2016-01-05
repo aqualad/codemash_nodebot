@@ -19,6 +19,7 @@
   "homepage": "https://github.com/aqualad/codemash_nodebot#readme",
   "dependencies": {
     "johnny-five": "^0.9.17",
+    "keyupdown": "https://github.com/suisho/node-keyupdown/tarball/master",
     "particle-io": "^0.12.0"
   }
 }
